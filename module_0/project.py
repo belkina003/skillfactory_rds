@@ -9,18 +9,15 @@ def game_core_v2(number):
     if number==a or number==b:
         return(1)
     while number != predict:
-        print(predict)
         count+=1
         if number > predict:
         #если предсказанное значение больше чем фактичское, то меняем левую
         #границу (отсекаем половину границы поиска)
             a = predict+1
-            print('a=',a)
         elif number < predict:
         #если предсказанное значение меньше чем фактичское, то меняем правую
         #границу (отсекаем половину границы поиска)
             b =predict-1
-            print('b=',b)
         #для новых границ, снова находим середину интервала, как предсказанное
         #значение
         predict=(a+b)//2
