@@ -1,4 +1,3 @@
-#Для реализации функции используем алгоритм "двоичный поиск"
 def game_core_v2(number):
     #устанавливаем границы поиска
     a=1
@@ -6,8 +5,6 @@ def game_core_v2(number):
     #первоначальное задание предсказания, т.е. середина интервала
     predict=50
     count = 0
-    if number==a or number==b or number==predict:
-        return(1)
     while number != predict:
         count+=1
         if number > predict:
@@ -21,5 +18,6 @@ def game_core_v2(number):
         #для новых границ, снова находим середину интервала, как предсказанное
         #значение
         predict=(a+b)//2
-        
-    return(count) # выход из цикла, если угадали
+    if number==predict:
+        return(1)   
+    return('Количество попыток:',count) # выход из цикла, если угадали
