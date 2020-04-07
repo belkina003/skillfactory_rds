@@ -6,7 +6,7 @@ def game_core_v2(number):
     #первоначальное задание предсказания, т.е. середина интервала
     predict=50
     count = 0
-    if number==a or number==b:
+    if number==a or number==b or number==predict:
         return(1)
     while number != predict:
         count+=1
